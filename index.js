@@ -14,8 +14,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    // origin: ["https://internshipfrontend-po9g.onrender.com"],
-    origin: "*",
+    origin: ["https://internshipfrontend-po9g.onrender.com"],
     credentials: true,
   })
 );
