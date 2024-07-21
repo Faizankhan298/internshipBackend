@@ -12,10 +12,12 @@ const mongoose = require("mongoose")
 app.use(bodyParser.json())
 app.use(cookieParser())
 
-app.use(cors({
-    origin:["http://localhost:3001"],
-    credentials:true
-}))
+app.use(
+  cors({
+    origin: ["https://internshipfrontend-po9g.onrender.com"],
+    credentials: true,
+  })
+);
 
 const mongo_url = process.env.MONGO_CONN;
 
