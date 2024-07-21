@@ -1,7 +1,7 @@
 const express =require("express")
 const app = express()
-require("dotenv").config();
-
+const env = require("dotenv");
+env.config();
 const cors = require("cors")
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
