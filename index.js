@@ -1,7 +1,7 @@
 const express =require("express")
 const app = express()
-const env = require("dotenv");
-env.config();
+require("dotenv").config();
+
 const cors = require("cors")
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
@@ -20,9 +20,9 @@ app.use(cors({
 const mongo_url = process.env.MONGO_CONN;
 
 
-mongoose.connect(mongo_url).then(() => {
-  console.log("connected to database");
-});
+mongoose.connect(mongo_url).then(()=>{
+    console.log("connected to database")
+})
 
 app.use("/auth",router)
 
