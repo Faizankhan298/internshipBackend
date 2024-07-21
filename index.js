@@ -1,6 +1,6 @@
 const express =require("express")
 const app = express()
-require("dotenv").config();
+// require("dotenv").config();
 
 const cors = require("cors")
 const bodyParser = require("body-parser")
@@ -19,10 +19,10 @@ app.use(
   })
 );
 
-const mongo_url = process.env.MONGO_CONN;
+// const mongo_url = process.env.MONGO_CONN;
 
 
-mongoose.connect(mongo_url).then(()=>{
+mongoose.connect("mongodb+srv://fk29837:faizan@cluster0.q2fszrh.mongodb.net/internship?retryWrites=true&w=majority&appName=Cluster0").then(()=>{
     console.log("connected to database")
 })
 
